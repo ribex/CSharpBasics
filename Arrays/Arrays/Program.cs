@@ -16,9 +16,16 @@ namespace Arrays
             // numbers[1] = 2;
             // numbers[2] = 3;
 
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
+            Console.WriteLine(numbers[0]); // 1
+            Console.WriteLine(numbers[1]); // 0
+            Console.WriteLine(numbers[2]); // 0
+
+            var flags = new bool[3];
+            flags[0] = true;
+
+            Console.WriteLine(flags[0]); // True
+            Console.WriteLine(flags[1]); // False
+            Console.WriteLine(flags[2]); // False
         }
     }
 }
