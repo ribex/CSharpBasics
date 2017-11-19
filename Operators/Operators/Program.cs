@@ -14,6 +14,9 @@ namespace Operators
             var b = 2;
 
             Console.WriteLine(a > b);
+            Console.WriteLine(a == b);
+            Console.WriteLine(a != b);
+            Console.WriteLine(!(a != b));
         }
     }
 }
