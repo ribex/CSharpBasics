@@ -42,6 +42,19 @@ namespace Iterations
             {
                 Console.WriteLine(number);
             }
+
+            var j = 0;
+            while (j <= 10)
+            {
+                if (j % 2 == 0)
+                {
+                    Console.WriteLine(j);
+                }
+
+                j++;
+            }
+
+
         }
     }
 }
