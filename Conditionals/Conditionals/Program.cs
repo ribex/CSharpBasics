@@ -10,22 +10,23 @@ namespace Conditionals
     {
         static void Main(string[] args)
         {
-            bool isGoldCustomer = true;
+            var season = Season.Autumn;
 
-            //float price;
-            //if (isGoldCustomer)
-            //{
-            //    price = 19.95f;
-            //}
-            //else
-            //{
-            //    price = 29.95f;
-            //}
+            switch (season)
+            {
+                case Season.Autumn:
+                case Season.Spring:
+                    Console.WriteLine("It's a beautiful season.");
+                    break;
 
-            // ternary operator
-            float price = (isGoldCustomer) ? 19.95f : 29.95f;
+                case Season.Summer:
+                    Console.WriteLine("It's perfect to go to the beach.");
+                    break;
 
-            Console.WriteLine(price);
+                default:
+                    Console.WriteLine("I don't understand that season!");
+                    break;
+            }
         }
     }
 }
