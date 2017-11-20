@@ -28,7 +28,7 @@ namespace Exercise55._3
                 }
             } while (count < 5);
 
-            // Array.Sort(numbers);
+            Array.Sort(numbers);
             for (var i = 0; i < 5; i++)
             {
                 Console.Write(numbers[i] + " ");
