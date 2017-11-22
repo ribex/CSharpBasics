@@ -19,20 +19,23 @@ namespace Exercise67._3
                 Console.WriteLine("Invalid Time");
                 return;
             }
+            Console.WriteLine(TimeValidator(entry));
+        }
 
+        public static string TimeValidator(string entry)
+        {
             var hourMin = entry.Split(':');
             var hour = Convert.ToByte(hourMin[0]);
             var minute = Convert.ToByte(hourMin[1]);
 
             if ((hour > 0 && hour < 24) && (minute >= 0 && minute < 60))
             {
-                Console.WriteLine("Ok");
+                return ("Ok");
             }
             else
             {
-                Console.WriteLine("Invalid Time");
+                return ("Invalid Time");
             }
-
         }
     }
 }
