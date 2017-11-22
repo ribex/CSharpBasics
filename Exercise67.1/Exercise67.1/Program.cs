@@ -12,22 +12,20 @@ namespace Exercise67._1
         {
             Console.WriteLine("Enter a few numbers separated by hyphens (-): ");
             string entry = Console.ReadLine();
-            var values = entry.Split('-');
-            var consecutive = true;
+            Console.WriteLine(IsConsecutive(entry));
+        }
 
+        public static string IsConsecutive(string entry)
+        {
+            var values = entry.Split('-');
             for (int i = 0; i < values.Length - 1; i++)
             {
                 if (Math.Abs(Convert.ToInt32(values[i]) - Convert.ToInt32(values[i + 1])) != 1)
                 {
-                    Console.WriteLine("Not Consecutive");
-                    consecutive = false;
-                    break;
+                    return ("Not Consecutive");
                 }
             }
-            if (consecutive)
-            {
-                Console.WriteLine("Consecutive");
-            }
+            return ("Consecutive");
         }
     }
 }
