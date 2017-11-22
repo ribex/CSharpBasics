@@ -15,9 +15,13 @@ namespace Exercise67._4
 
             var entry = Console.ReadLine();
 
-            var lower = entry.ToLower();
+            Console.WriteLine(Pascalize(entry));
+        }
 
-            var words = lower.Split(' ');
+        public static string Pascalize(string entry)
+        {
+
+            var words = entry.ToLower().Split(' ');
 
             var output = new List<string>();
 
@@ -25,10 +29,7 @@ namespace Exercise67._4
             {
                 output.Add(word.First().ToString().ToUpper() + word.Substring(1));
             }
-
-            var pascalCase = String.Join("", output);
-
-            Console.WriteLine(pascalCase);
+            return(String.Join("", output));
         }
     }
 }
