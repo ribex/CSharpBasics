@@ -19,15 +19,22 @@ namespace Exercise67._2
                 return;
             }
 
+            Console.WriteLine(DuplicateNumberDetector(entry));
+        }
+
+        public static string DuplicateNumberDetector(string entry)
+        {
             var numbers = entry.Split('-');
 
             for (var i = 0; i < numbers.Length - 1; i++)
             {
                 if (numbers[i] == numbers[i + 1])
                 {
-                    Console.WriteLine("Duplicate");
+                    return("Duplicate");
                 }
             }
+
+            return(null);
         }
     }
 }
