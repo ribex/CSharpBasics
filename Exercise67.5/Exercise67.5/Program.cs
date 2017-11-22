@@ -12,6 +12,12 @@ namespace Exercise67._5
         {
             Console.WriteLine("Enter an English word: ");
             var entry = Console.ReadLine();
+
+            Console.WriteLine(VowelCount(entry));
+        }
+
+        public static int VowelCount(string entry)
+        {
             var lower = entry.ToLower();
             var vowelCount = 0;
             foreach (char letter in lower)
@@ -21,7 +27,7 @@ namespace Exercise67._5
                     vowelCount++;
                 }
             }
-            Console.WriteLine(vowelCount);
+            return (vowelCount);
         }
     }
 }
